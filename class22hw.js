@@ -36,3 +36,37 @@ function multiplyNumeric(obj) {
         }
     } 
 }
+
+//Creating a calculator 
+
+let calculator = {
+    read(){
+        const a = prompt("Put a value")
+        const b = prompt("Put a value")
+        this.a =a
+        this.b=b
+    }
+    sum(){
+        return this.a+this.b
+    }
+    read(){
+        return this.a*this.b
+    }
+}
+//Chaining 
+
+let ladder = {
+    step: 0,
+    up() {
+      this.step++;
+      return this;
+    },
+    down() {
+      this.step--;
+      return this;
+    },
+    showStep() {
+      alert( this.step );
+      return this;
+    }
+  };
