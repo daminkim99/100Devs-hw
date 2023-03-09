@@ -5,7 +5,7 @@
     	<meta name="description" content="This is where your description goes">
     	<meta name="keywords" content="one, two, three">
 
-		<title>Title in the tab</title>
+		<title>Movie Search</title>
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
@@ -13,13 +13,27 @@
 	</head>
 	<body>
 
-		<h1>Which Pokemon?</h1>
-		<input type="text" name="" value="">
-		<button type="button" name="button">Get Pokemon</button>
+		<h1>Enter A title of a Movie you want to lookup: </h1>
+		<form>
+			<input type="text" name="" value="">
+			<button type="button" name="button">Get Info</button>
+		</form>
 
-		<h2>Name?</h2>
 		<img src="img/pokemon.jpeg" alt="">
-		<h3>Type?</h3>
+
+		<h2>Title:</h2>
+		<section>
+			<div>
+				<h4 id="releaseDate">Release Date:</h4>
+				<h4 id="runtime">Runtime:</h4>
+				<h4 id="genre">Genre:</h4>
+			</div>
+				<h4 id="director">Director:</h4>
+				<h4 id="actors">Actors: </h4>
+				<h4 id="language">Language: </h4>
+		</section>
+		<p id="plot">Plot:</p>
+		
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
