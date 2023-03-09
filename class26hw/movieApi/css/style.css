@@ -22,7 +22,7 @@ img{
 }
 
 h1 {
-  padding-top:6%;
+  padding-top:2%;
 }
 form{
   padding-top:1%;
@@ -41,7 +41,7 @@ section div{
   width: 20%;
 }
 section div{
-  padding-left:7%;
+  padding-left:5%;
 }
 
 p{
@@ -49,6 +49,7 @@ p{
   padding-top:2%;
   width:40%;
   margin:auto;
+  margin-bottom:5%;
 }
 
 /******************************************
