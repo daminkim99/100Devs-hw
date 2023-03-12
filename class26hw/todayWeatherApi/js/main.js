@@ -24,7 +24,38 @@ function getFetch(){
         //insert snowfall sum and rain sum
         document.querySelector('#snowsum').innerText = `Snowfall sum : ${data.daily.snowfall_sum[0]} cm`
         document.querySelector('#rainsum').innerText = `Rain sum : ${data.daily.rain_sum[0]} mm`
+        //input the hourly
+        for (let i =0;i<24;i++){
+          //create an tr
+          const tr = document.createElement('tr')
+          document.querySelector('tbody').appendChild(tr)
+          for (const prop in data.hourly){
+            if (prop === 'time'){
+              const td = document.createElement('td')
+              td.textContent = timeCutter([data.hourly[prop][i]])
+              tr.appendChild(td)
+            } else{
+            //add text to td
+              const td = document.createElement('td')
+              td.textContent = `${data.hourly[prop][i]} \u00B0C`
+            //appends it to the table row you just created 
+              tr.appendChild(td)
+          }}
+         
+        }
+      
       })
+     
+        // data.hourly.time.forEach(obj => {
+        // //create an li 
+        // const tr= document.createElement('tr')
+        // const td = document.createElement('td')
+        // //add text to li
+        // li.textContent = obj.name
+        // //append the li to the ul
+        // document.querySelector('ul').appendChild(li)
+      
+
       .catch(err => {
           console.log(`error ${err}`)
       });
