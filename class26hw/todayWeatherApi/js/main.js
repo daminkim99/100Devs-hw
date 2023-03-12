@@ -41,21 +41,8 @@ function getFetch(){
             //appends it to the table row you just created 
               tr.appendChild(td)
           }}
-         
         }
-      
       })
-     
-        // data.hourly.time.forEach(obj => {
-        // //create an li 
-        // const tr= document.createElement('tr')
-        // const td = document.createElement('td')
-        // //add text to li
-        // li.textContent = obj.name
-        // //append the li to the ul
-        // document.querySelector('ul').appendChild(li)
-      
-
       .catch(err => {
           console.log(`error ${err}`)
       });
@@ -94,6 +81,8 @@ function convertWeatherCode(code){
       return "Thunderstorm with slight and heavy hail"
     }
   }
+
+  //converts time so it only shows HH:MM
 function timeCutter(time){
   return time[0].substring(time[0].length-5)
 }
