@@ -70,3 +70,42 @@ let ladder = {
       return this;
     }
   };
+
+//create a new calculator 
+
+function Calculator() {
+    this.read = function(){
+        this.a = prompt("Value one :") 
+        this.b = prompt("Value two :")
+    }
+    this.sum = function(){
+        return this.a + this.b
+    }
+    this.mul = function() {
+        return this.a*this.b
+    }
+    
+}
+
+let calculator = new Calculator();
+calculator.read();
+
+alert( "Sum=" + calculator.sum() );
+alert( "Mul=" + calculator.mul() );
+
+//create New Accumulator
+
+function Accumulator(startingValue){
+    this.value = startingValue
+    
+    this.read = function(){
+        this.value += Number(prompt("Enter a value:"))
+
+    }
+}
+let accumulator = new Accumulator(1); // initial value 1
+
+accumulator.read(3); // adds the user-entered value
+accumulator.read(5); // adds the user-entered value
+
+alert(accumulator.value);
